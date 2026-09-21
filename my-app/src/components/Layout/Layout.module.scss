@@ -1,4 +1,33 @@
 .wrapper {
-background-color: #9394A5;
+background-color: rgba(93, 45, 30, 0.517);
+
+}
+
+.container{
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    
+    
+}
+
+.header{
+    background-color: rgba(50, 24, 16, 0.336);
+    padding: 50px;
+
+
+}
+
+.headerTitle{
+    color: rgb(223, 196, 187);
+
+}
+
+.footer{
+direction: rtl;
+color: rgb(223, 196, 187);
+padding: 50px;
+background-color:rgba(50, 24, 16, 0.334);
 }
 
