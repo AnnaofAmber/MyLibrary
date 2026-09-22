@@ -6,6 +6,15 @@ const logger = require('morgan');
 const port = 3000
 require('dotenv').config();
 
+// const mongoose = require('mongoose');
+
+// mongoose.Promise = global.Promise;
+
+// mongoose.connect(process.env.DB_HOST, {
+// useNewUrlParser: true,
+// useCreateIndex: true,
+// useUnifiedTopology: true,
+// });
 
 const indexRouter = require('./routes/index');
 const usersRouter = require('./routes/users');
@@ -49,15 +58,10 @@ app.use(function(err, req, res, next) {
   res.render('error');
 });
 
+
+
+
+
+
+
 module.exports = app;
-
-
-// const mongoose = require('mongoose');
-
-// mongoose.Promise = global.Promise;
-
-// mongoose.connect(process.env.DB_HOST, {
-// useNewUrlParser: true,
-// useCreateIndex: true,
-// useUnifiedTopology: true,
-// });
