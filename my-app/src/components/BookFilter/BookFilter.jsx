@@ -11,12 +11,13 @@ export const BookFilter = () => {
   const isRead = useSelector(state => state.isRead)
   
   const handleFilterChange = event => {
+    console.log(event);
+    
     return dispatch(filterBooks(event.target.value));
   };
 
 
   const handleFilterChangeIsRead = event => {
-
     return dispatch(readFilter(event.target.id))
   }
   
@@ -30,20 +31,24 @@ export const BookFilter = () => {
         className={css.input}
         id="search"
         name="filter"
-        value={name||author}
+        value={name}
         type="text"
         onChange={handleFilterChange}
       />
     </div>
     <div>
-      <label for="all">Всі</label>
+      <button id='all' onClick={handleFilterChangeIsRead}></button>
+      <button id='read' onClick={handleFilterChangeIsRead}></button>
+      <button id='not' onClick={handleFilterChangeIsRead}></button>
+
+      {/* <label for="all">Всі</label>
       <input id='all' type="checkbox" onChange={handleFilterChangeIsRead}/>
 
       <label for="read">Прочитані</label>
       <input id='read' type="checkbox" onChange={handleFilterChangeIsRead}/>
 
       <label for="not">Непрочитані</label>
-      <input id='not' type="checkbox" onChange={handleFilterChangeIsRead}/>
+      <input id='not' type="checkbox" onChange={handleFilterChangeIsRead}/> */}
     </div>
 </div>
   );

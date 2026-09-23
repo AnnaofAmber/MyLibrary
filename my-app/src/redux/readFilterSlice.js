@@ -8,7 +8,7 @@ const initialState = {
 
 const readFilterBookSlice = createSlice({
   name: 'isRead',
-  initialState: initialState.isRead, 
+  initialState: initialState.all, 
   reducers: {
     readFilter(state, action) {
         return (state = action.payload);
