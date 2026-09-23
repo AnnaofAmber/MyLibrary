@@ -11,7 +11,7 @@ import {
   REGISTER,
 } from 'redux-persist';
 import storage from 'redux-persist/lib/storage';
-// import { filterReducer } from './filterSlice';
+import { filterReducer } from './filterBooksSlice';
 
 const persistConfig = {
   key: 'root',
@@ -21,7 +21,7 @@ const persistConfig = {
 
 const rootReducer = combineReducers({
   books: booksReducer,
-//   filter: filterReducer,
+  filter: filterReducer,
 });
 
 const persistedReducer = persistReducer(persistConfig, rootReducer);
