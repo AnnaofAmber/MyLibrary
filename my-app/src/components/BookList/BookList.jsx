@@ -25,6 +25,7 @@ export const BookList = ({showModalImage}) => {
           genre={book.genre}
           cover ={book.cover}
           image={book.cover}
+          pages={book.pages}
           showModalImage={showModalImage}
           />
         ))

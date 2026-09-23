@@ -2,7 +2,7 @@ import { BookInfo } from '../BookInfo/BookInfo';
 import scss from './Modal.module.scss';
 import { useEffect } from 'react';
 
-export const Modal = ({ onClose, image }) => {
+export const Modal = ({ onClose, image, nameModal, author, year, genre }) => {
   useEffect(() => {
     window.addEventListener('keydown', onClose);
 
@@ -19,7 +19,7 @@ export const Modal = ({ onClose, image }) => {
   return (
     <div className={scss.overlay} onClick={handleClick}>
       <div className={scss.modal}>
-        <BookInfo image={image}/>
+        <BookInfo image={image} nameModal={nameModal} author={author} year={year} genre={genre} />
       </div>
     </div>
   );

@@ -9,16 +9,24 @@ import { useState } from 'react';
 export const Layout = () => {
   const [isModal, setIsModal] = useState(false);
   const [image, setModalImage] = useState({});
+  const [name, setModalName] = useState({});
+  const [author, setModalAuthor] = useState({});
+  const [year, setModalYear] = useState({});
+  const [genre, setModalGenre] = useState({});
 
-  const showModalImage = imageModal => {
+  const showModalImage = (imageModal,name, author, genre, year) => {
     setModalImage(imageModal);
+    setModalName(name)
+    setModalAuthor(author)
+    setModalGenre(genre)
+    setModalYear(year)
     setIsModal(true);
   };
 
   const closeModal = () => {
     setModalImage({});
     setIsModal(false);}
-    console.log(image);
+
     
 return (
     <div className={scss.wrapper}>
@@ -35,7 +43,7 @@ return (
         <h3>2026</h3>
     </footer>
     </div>
-      {isModal && <Modal image={image} onClose={closeModal} />}
+      {isModal && <Modal nameModal={name} image={image} author={author} genre={genre} year={year} onClose={closeModal} />}
 </div>
 )
 }
