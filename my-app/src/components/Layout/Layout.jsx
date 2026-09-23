@@ -1,6 +1,7 @@
 import scss from './Layout.module.scss' 
 
 import { BookList } from '../BookList/BookList'
+import {BookFilter} from '../BookFilter/BookFilter'
 import { Modal } from '../Modal/Modal';
 import { useState } from 'react';
 
@@ -35,6 +36,7 @@ return (
         <h1 className={scss.headerTitle}>
             MyLibrary
         </h1>
+        <BookFilter/>
     </header>
     <main>
         <BookList showModalImage={showModalImage}/>
