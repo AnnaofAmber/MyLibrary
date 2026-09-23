@@ -15,6 +15,7 @@ export const Layout = () => {
   const [year, setModalYear] = useState({});
   const [genre, setModalGenre] = useState({});
 
+
   const showModalImage = (imageModal,name, author, genre, year) => {
     setModalImage(imageModal);
     setModalName(name)

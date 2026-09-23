@@ -4,8 +4,11 @@ import { BookItem } from "../BookItem/BookItem"
 import { useSelector } from 'react-redux'
 
 const onFilteredBooks = (books, filter, ) => {
-  return books.filter(contact =>
-    contact.name.toLowerCase().includes(filter.toLowerCase())
+  return books.filter(book =>
+    book.name.toLowerCase().includes(filter.toLowerCase()
+  )||
+      book.author.toLowerCase().includes(filter.toLowerCase()
+  )
   );
 };
 

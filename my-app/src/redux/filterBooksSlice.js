@@ -3,17 +3,19 @@ import { createSlice } from '@reduxjs/toolkit';
 const initialState = {
   name: '',
   author:'',
-  isRead:false,
+  // isRead:false,
 };
 
 const filterBooksSlice = createSlice({
   name: 'name',
-  initialState: initialState.name,
+  initialState: initialState.name, 
   reducers: {
     filterBooks(state, action) {
+      
       return (state = action.payload);
     },
   },
+  
 });
 
 export const { filterBooks } = filterBooksSlice.actions;

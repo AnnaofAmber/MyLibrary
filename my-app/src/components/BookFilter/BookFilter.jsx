@@ -8,23 +8,39 @@ export const BookFilter = () => {
   const name = useSelector(state => state.name);
   const author = useSelector(state => state.author);
   const isRead = useSelector(state => state.isRead)
+  // const filter = useSelector(state=>state.filter)
   
   const handleFilterChange = event => {
+    console.log(event.target.value);
+    
     return dispatch(filterBooks(event.target.value));
   };
+
+
+  const handleFilterChangeIsRead = event => {
+    console.log(event.target);
+    
+    // return dispatch(filterBooks(event));
+  }
+
   return (
-    <div className={css.filter}>
+<div>
+      <div className={css.filter}>
       <label className={css.label} htmlFor="search">
-        Find contacts by name:
+        Пошук: 
       </label>
       <input
         className={css.input}
         id="search"
         name="filter"
-        value={name}
+        value={name||author}
         type="text"
         onChange={handleFilterChange}
       />
     </div>
+    <div>
+      <input type="checkbox" onChange={handleFilterChangeIsRead}/>
+    </div>
+</div>
   );
 };

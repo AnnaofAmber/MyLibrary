@@ -3,8 +3,9 @@ import { createSlice } from '@reduxjs/toolkit';
 
 const initialState = {
   books: [
-    { id: nanoid(), name: 'Хроніки Амбера', author: 'Роджер Желязни', year:'', genre:'', publisher:'', cover: 'хронікиАмбера.jpg', pages:'864', color:'#102f20', textColor:'#d8e2d6', read:true },
-        { id: nanoid(), name: 'Хроніки Амбера', author: 'Роджер Желязни', year:'', genre:'', publisher:'', cover: 'хронікиАмбера.jpg', pages:'84' },
+    { id: nanoid(), name: 'Хроніки Амбера', author: 'Роджер Бл', year:'', genre:'', publisher:'', cover: 'хронікиАмбера.jpg', pages:'864', color:'#102f20', textColor:'#d8e2d6', read:true },
+    { id: nanoid(), name: 'Тобі боляче', author: 'Роджер АП', year:'', genre:'', publisher:'', cover: 'хронікиАмбера.jpg', pages:'864', color:'#102f20', textColor:'#d8e2d6', read:true },
+        { id: nanoid(), name: 'Схованка', author: 'Роджер Желязни', year:'', genre:'', publisher:'', cover: 'хронікиАмбера.jpg', pages:'864', color:'#102f20', textColor:'#d8e2d6', read:false },
   ],
 };
 const bookSlice = createSlice({
