@@ -2,27 +2,24 @@ import css from './BookFilter.module.scss';
 
 import { useDispatch, useSelector } from 'react-redux';
 import { filterBooks } from '../../redux/filterBooksSlice';
+import { readFilter } from '../../redux/readFilterSlice';
 
 export const BookFilter = () => {
   const dispatch = useDispatch();
   const name = useSelector(state => state.name);
   const author = useSelector(state => state.author);
   const isRead = useSelector(state => state.isRead)
-  // const filter = useSelector(state=>state.filter)
   
   const handleFilterChange = event => {
-    console.log(event.target.value);
-    
     return dispatch(filterBooks(event.target.value));
   };
 
 
   const handleFilterChangeIsRead = event => {
-    console.log(event.target);
-    
-    // return dispatch(filterBooks(event));
-  }
 
+    return dispatch(readFilter(event.target.id))
+  }
+  
   return (
 <div>
       <div className={css.filter}>
@@ -39,7 +36,14 @@ export const BookFilter = () => {
       />
     </div>
     <div>
-      <input type="checkbox" onChange={handleFilterChangeIsRead}/>
+      <label for="all">Всі</label>
+      <input id='all' type="checkbox" onChange={handleFilterChangeIsRead}/>
+
+      <label for="read">Прочитані</label>
+      <input id='read' type="checkbox" onChange={handleFilterChangeIsRead}/>
+
+      <label for="not">Непрочитані</label>
+      <input id='not' type="checkbox" onChange={handleFilterChangeIsRead}/>
     </div>
 </div>
   );

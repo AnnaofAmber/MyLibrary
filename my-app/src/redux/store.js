@@ -12,6 +12,7 @@ import {
 } from 'redux-persist';
 import storage from 'redux-persist/lib/storage';
 import { filterReducer } from './filterBooksSlice';
+import { readFilterReducer } from './readFilterSlice';
 
 const persistConfig = {
   key: 'root',
@@ -22,6 +23,7 @@ const persistConfig = {
 const rootReducer = combineReducers({
   books: booksReducer,
   filter: filterReducer,
+  isRead: readFilterReducer
 });
 
 const persistedReducer = persistReducer(persistConfig, rootReducer);

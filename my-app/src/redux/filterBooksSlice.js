@@ -2,8 +2,6 @@ import { createSlice } from '@reduxjs/toolkit';
 
 const initialState = {
   name: '',
-  author:'',
-  // isRead:false,
 };
 
 const filterBooksSlice = createSlice({
