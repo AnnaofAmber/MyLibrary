@@ -3,8 +3,7 @@ import { createSlice } from '@reduxjs/toolkit';
 
 const initialState = {
   books: [
-    { id: nanoid(), name: 'Rosie Simpson', author: '459-12-56' },
-
+    { id: nanoid(), name: 'Хроніки Амбера', author: 'Роджер Желязни', year:'', genre:'', publisher:'', image: 'хронікиАмбера.jpg' },
   ],
 };
 const bookSlice = createSlice({

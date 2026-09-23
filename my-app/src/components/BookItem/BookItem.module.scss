@@ -1,4 +1,11 @@
 .bookItem{
     display: flex;
     flex-direction: column;
+    padding: 40px;
+}
+
+.img{
+  display: block;
+  max-width: 100%;
+  height: auto;
 }

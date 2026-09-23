@@ -3,16 +3,29 @@ import scss from './BookList.module.scss'
 import { BookItem } from "../BookItem/BookItem"
 import { useSelector } from 'react-redux'
 
+const onFilteredBooks = (books, filter) => {
+  return books.filter(contact =>
+    contact.name.toLowerCase().includes(filter.toLowerCase())
+  );
+};
 
 export const BookList = () => {
     const books = useSelector(state=>state.books)
+    const filter = useSelector(state=>state.filter)
+    const filteredBooks = onFilteredBooks(books, filter);
     return(
-        <ul className={scss.bookList}>
+         <ul className={scss.bookList}>
+        {filteredBooks.map(book => (
             <BookItem
-          id={books.id}
-          key={books.id}
-          name={books.name}
-          author={books.author}/>
-        </ul>
+          id={book.id}
+          key={book.id}
+          name={book.name}
+          author={book.author}
+          year={book.year}
+          genre={book.genre}
+          image ={book.image}/>
+        ))
+    }
+    </ul>
     )
 }

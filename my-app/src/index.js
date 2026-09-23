@@ -7,7 +7,7 @@ import reportWebVitals from './reportWebVitals.js';
 import {Provider} from 'react-redux'
 import {persistor, store} from './redux/store'
 // import {persistor, store } from 'redux/store';
-import './index.scss';
+import scss from './index.module.scss';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
