@@ -23,7 +23,8 @@ export const BookList = ({showModalImage}) => {
           author={book.author}
           year={book.year}
           genre={book.genre}
-          image ={book.image}
+          cover ={book.cover}
+          image={book.cover}
           showModalImage={showModalImage}
           />
         ))

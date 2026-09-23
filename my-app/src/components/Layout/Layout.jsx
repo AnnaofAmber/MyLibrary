@@ -7,17 +7,18 @@ import { useState } from 'react';
 
 
 export const Layout = () => {
-  const [isMore, setIsMore] = useState(false);
   const [isModal, setIsModal] = useState(false);
-  const [modalImage, setModalImage] = useState({});
-  const showModalImage = image => {
-    setModalImage(image);
+  const [image, setModalImage] = useState({});
+
+  const showModalImage = imageModal => {
+    setModalImage(imageModal);
     setIsModal(true);
   };
 
   const closeModal = () => {
     setModalImage({});
     setIsModal(false);}
+    console.log(image);
     
 return (
     <div className={scss.wrapper}>
@@ -34,7 +35,7 @@ return (
         <h3>2026</h3>
     </footer>
     </div>
-      {isModal && <Modal largeImage={modalImage} onClose={closeModal} />}
+      {isModal && <Modal image={image} onClose={closeModal} />}
 </div>
 )
 }
