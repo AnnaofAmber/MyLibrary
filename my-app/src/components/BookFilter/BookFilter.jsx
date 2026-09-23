@@ -1,4 +1,4 @@
-import css from './BookFilter.module.scss';
+import scss from './BookFilter.module.scss';
 
 import { useDispatch, useSelector } from 'react-redux';
 import { filterBooks } from '../../redux/filterBooksSlice';
@@ -22,24 +22,24 @@ export const BookFilter = () => {
   }
   
   return (
-<div>
-      <div className={css.filter}>
-      <label className={css.label} htmlFor="search">
-        Пошук: 
+<div className={scss.container}>
+      <div className={scss.filter}>
+      <label className={scss.label} htmlFor="search">
       </label>
       <input
-        className={css.input}
+        className={scss.input}
         id="search"
         name="filter"
         value={name}
         type="text"
         onChange={handleFilterChange}
+        placeholder='Пошук'
       />
     </div>
-    <div>
-      <button id='all' onClick={handleFilterChangeIsRead}></button>
-      <button id='read' onClick={handleFilterChangeIsRead}></button>
-      <button id='not' onClick={handleFilterChangeIsRead}></button>
+    <div className={scss.btnContaier}>
+      <button className={scss.btn} id='all' onClick={handleFilterChangeIsRead}>Всі</button>
+      <button className={scss.btn} id='read' onClick={handleFilterChangeIsRead}>Прочитані</button>
+      <button className={scss.btn} id='not' onClick={handleFilterChangeIsRead}>Непрочитані</button>
 
       {/* <label for="all">Всі</label>
       <input id='all' type="checkbox" onChange={handleFilterChangeIsRead}/>
