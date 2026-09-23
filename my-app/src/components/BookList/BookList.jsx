@@ -3,13 +3,13 @@ import scss from './BookList.module.scss'
 import { BookItem } from "../BookItem/BookItem"
 import { useSelector } from 'react-redux'
 
-const onFilteredBooks = (books, filter) => {
+const onFilteredBooks = (books, filter, ) => {
   return books.filter(contact =>
     contact.name.toLowerCase().includes(filter.toLowerCase())
   );
 };
 
-export const BookList = () => {
+export const BookList = ({showModalImage}) => {
     const books = useSelector(state=>state.books)
     const filter = useSelector(state=>state.filter)
     const filteredBooks = onFilteredBooks(books, filter);
@@ -23,7 +23,9 @@ export const BookList = () => {
           author={book.author}
           year={book.year}
           genre={book.genre}
-          image ={book.image}/>
+          image ={book.image}
+          showModalImage={showModalImage}
+          />
         ))
     }
     </ul>
