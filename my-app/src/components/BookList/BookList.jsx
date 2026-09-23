@@ -1,11 +1,10 @@
 import scss from './BookList.module.scss'
 
 import { BookItem } from "../BookItem/BookItem"
-import { useDispatch, useSelector } from 'react-redux';
-import { readFilter } from '../../redux/readFilterSlice';
+import { useSelector } from 'react-redux';
 
 
-const onFilteredBooks = (books, filter, isRead, dispatch) => {
+const onFilteredBooks = (books, filter, isRead, ) => {
   if(filter){
     return books.filter(book =>
     book.name.toLowerCase().includes(filter.toLowerCase()
@@ -33,15 +32,13 @@ const onFilteredBooks = (books, filter, isRead, dispatch) => {
 };
 
 export const BookList = ({showModalImage}) => {
-    const dispatch = useDispatch();
     const books = useSelector(state=>state.books)
     const filter = useSelector(state=>state.filter)
     const isRead = useSelector(state=>state.isRead)
 
-    console.log(isRead);
     
     
-    const filteredBooks = onFilteredBooks(books, filter, isRead, dispatch);
+    const filteredBooks = onFilteredBooks(books, filter, isRead);
     return(
          <ul className={scss.bookList}>
         {filteredBooks.map(book => (
