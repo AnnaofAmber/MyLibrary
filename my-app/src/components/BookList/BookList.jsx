@@ -26,6 +26,8 @@ export const BookList = ({showModalImage}) => {
           cover ={book.cover}
           image={book.cover}
           pages={book.pages}
+          color={book.color}
+          textColor={book.textColor}
           showModalImage={showModalImage}
           />
         ))
