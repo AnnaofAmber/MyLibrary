@@ -8,10 +8,13 @@ export const BookInfo = ({image, author, nameModal, year, genre}) =>{
             <p>{author}</p>
         <img
         className={scss.img}
-        src={require(`../../covers/${image}`)}
+        // src={require(`../../covers/${image}`)}
+        src={image}
         alt="adss"
+        loading="lazy"
       />
         </section>
     </div>
     )
 }
+   
