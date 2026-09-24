@@ -87,9 +87,10 @@ return (
         </h1>
         <BookFilter/>
     </header>
-    <main>
+    <main className={scss.main}>
+       <div className={scss.counter}>{i}</div>
         <BookList filteredBooks={filteredBooks} showModalImage={showModalImage}/>
-        <div>{i}</div>
+       
     </main>
     <footer className={scss.footer}>
         <h3>2026</h3>

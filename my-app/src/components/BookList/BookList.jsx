@@ -7,7 +7,6 @@ export const BookList = ({showModalImage, filteredBooks}) => {
     return(
          <ul className={scss.bookList}>
         {filteredBooks.map(book => (
-          
             <BookItem
           id={book.id}
           key={book.id}
