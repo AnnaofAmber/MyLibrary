@@ -22,23 +22,5 @@
 
   padding: 10px 15px;
 }
-.btnContaier{
-display: flex;
-margin-top: 20px;
-}
 
-.btn{
-  background-color: #fff;
-display: block;
-width: 100px;
-height: 30px;
-font-weight:400;
-border-radius: 4px;
-outline: 2px solid rgb(223, 196, 187);
-border: none;
-font-size: 15px;
-color: rgb(100, 85, 80);
-}
-.btn:not(:first-child){
-margin-left: 15px;
-}
+
