@@ -8,9 +8,9 @@ export const BookItem = ({ id, name, author, year, genre, cover, image, showModa
 //   const onDelete = () => dispatch(deleteBook(id));
 const width = (Number(pages)+100)/10
 let height = width*2.5
-// if (height<200){
-//     height = 200
-// }
+if (height<200){
+    height = 200
+}
 const fontSizeTitle = height/15
 
 const fontSize = height/22
