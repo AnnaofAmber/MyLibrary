@@ -181,7 +181,7 @@ const initialState = {
       genre: "фентезі",
       publisher: "Богдан",
       cover: "https://vivat.com.ua/resize_3840x3840x80/storage/1.d/files/b/6/b654e86a_proklin-zona.webp",
-      pages: "128",
+      pages: "1000",
       color: "#d26533",
       textColor: "#e3e4df",
       read: true,

@@ -6,11 +6,20 @@ import scss from "./BookItem.module.scss";
 export const BookItem = ({ id, name, author, year, genre, cover, image, showModalImage, pages, color, textColor }) => {
 //   const dispatch = useDispatch();
 //   const onDelete = () => dispatch(deleteBook(id));
-const width = (Number(pages)+100)/10
-let height = width*2.5
+const width = (Number(pages))/10
+console.log(width);
+
+let height = (Number(pages))/3
+
 if (height<200){
-    height = 200
+    height = 200+width
 }
+if(height>300){
+  height = 300
+}
+// else{
+//   height=height+width
+// }
 const fontSizeTitle = height/15
 
 const fontSize = height/22
