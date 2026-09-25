@@ -3,6 +3,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+
     
    
 }
@@ -20,9 +21,8 @@
     margin-right: 5px;
   background-color: aliceblue;
   border-radius: 2px;
+       container-type: inline-size
 }
-
-
 
 
 .shelf{
@@ -30,4 +30,12 @@
   height: 20px;
   width: 110%;
   margin-bottom: 20px;
+}
+
+.name{
+  font-size: 9cqi;
+}
+
+.author{
+  font-size: 6cqi;
 }

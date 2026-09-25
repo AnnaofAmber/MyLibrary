@@ -3,10 +3,10 @@ import scss from "./BookItem.module.scss";
 // import { useDispatch } from "react-redux";
 // import { deleteBook } from "../../redux/booksSlice";
 
-export const BookItem = ({ id, name, author, year, genre, cover, image, showModalImage, pages, color, textColor }) => {
+export const BookItem = ({ id, name, author, year, genre, cover, image, showModalImage, color, textColor, nameModal, publishYear, publisher, pages, read, series, seriesName,volumes, part, rating,description, language, dateOfReading, dateOfBuying }) => {
 //   const dispatch = useDispatch();
 //   const onDelete = () => dispatch(deleteBook(id));
-const width = (Number(pages))/10
+const width = (Number(pages))/9
 console.log(width);
 
 let height = (Number(pages))/3
@@ -17,20 +17,19 @@ if (height<200){
 if(height>300){
   height = 300
 }
-// else{
-//   height=height+width
-// }
-const fontSizeTitle = height/15
 
+const fontSizeTitle = 14.5+width/12
 const fontSize = height/22
 
   return (
-    <li className={scss.bookItem}   onClick={() => showModalImage(image, name, author, year, genre)}>
+    <li className={scss.bookItem}   onClick={() => showModalImage(image, name, author, year, genre, cover, publishYear, publisher, pages, read, series, seriesName,volumes, part, rating,description, language, dateOfReading, dateOfBuying  )}>
         <div className={scss.bookSpine} style={{width:`${width}px`, height:`${height}px`, backgroundColor:`${color}`, color:`${textColor}`, }}>
-        <h2 className={scss.name} style={{fontSize:`${fontSizeTitle}px`}}>{name}</h2>
-        <p className={scss.author} style={{fontSize:`${fontSize}px`}}>{author}</p> 
+        <h2 className={scss.name} >{name}</h2>
+        <p className={scss.author} >{author}</p> 
         </div>
         <div className={scss.shelf}></div>
     </li>
   );
 };
+// style={{fontSize:`${fontSize}px`}}
+// style={{fontSize:`${fontSizeTitle}px`}}
