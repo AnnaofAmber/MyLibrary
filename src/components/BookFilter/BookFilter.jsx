@@ -3,7 +3,7 @@ import scss from './BookFilter.module.scss';
 import { useDispatch, useSelector } from 'react-redux';
 import { filterBooks } from '../../redux/filterBooksSlice';
 import { readFilter } from '../../redux/readFilterSlice';
-import clsx from 'clsx';
+// import clsx from 'clsx';
 import { ReadFilter } from '../ReadFilter/ReadFilter';
 
 

@@ -5,9 +5,9 @@ import ReactDOM from 'react-dom/client';
 import {App} from './components/App/App.jsx';
 import reportWebVitals from './reportWebVitals.js';
 import {Provider} from 'react-redux'
-import {persistor, store} from './redux/store'
+import { store} from './redux/store'
 // import {persistor, store } from 'redux/store';
-import scss from './index.module.scss';
+// import scss from './index.module.scss';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
